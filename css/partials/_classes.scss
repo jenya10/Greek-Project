@@ -4,48 +4,66 @@ body {
   background: $color-main-beige;
   }
 
-
 h1 {
-  //font-family: "Montserrat", sans-serif;
-  font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: .15em;
-  }
+ }
+
+ h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size:2em;
+  padding-top:1em;
+ }
 
 h3 {
-  //font-family: "Montserrat", sans-serif;
-  font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: .15em;
   }
 
 p {
-  font-family: 'Crimson Text', serif;
-  font-size: 1em;
-  color: $color-main-black;
-  letter-spacing: .08em;
-  line-height: 1.7em;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Crimson Text', serif;
+	font-size: 1.1em;
+	color: $color-main-black;
+	letter-spacing: .1em;
+	line-height: 2.4em;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .title{
  	letter-spacing: .15em;
  }
 
-.center {
-	text-align: center;
+ .nav-links {
+  font-size: 1em;
+  color: $color-main-gold-light;
+  margin-left:0.5em;
+  margin-right: 1em;
+  z-index:999px;
+
+  &:hover{
+    color:lighten($color-main-gold-light, 20%);
+  }
+ }
+
+.home-link>h1{
+  padding-left:1em;
 }
+    
 
-.left {
-	float:left;
-	margin-left: 0; 
+.epic {
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:.15em;
+  font-size:3.2em;
 }
-
-
 a {
-  //font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   text-transform: uppercase; }
 
 .dash {
@@ -66,12 +84,20 @@ a {
   border-radius:1px;
  }
 
+.dash-3 {
+  border: 2px solid $color-main-black;
+  margin-top: 2em !important;
+  margin-bottom:3em !important;
+  border-radius:1px;
+}
+
 .first {
-  margin-top: 5%; }
+  margin-top: 5em;
+}
 
 .secondary {
   font-family: 'Crimson Text', serif;
-  font-size: 1.6em;
+  font-size: 1.5em;
   line-height: 1.7em;
   font-style: italic;
   font-weight: 400;
@@ -81,9 +107,8 @@ a {
 .panel{
   border-style:none;
     border-width: 0px;
-    padding: 1.25rem 1.25rem 1.25rem;
+    padding: 2rem 1.75em 1.75em 1.75em;
     color: $color-main-black;
-    margin-bottom: 1.6rem;
     // background:none !important;
   
   &.pink {
@@ -104,8 +129,26 @@ a {
    &.red{
     background-color:$color-red;
   }
-  
+  .pt-20{
+    padding-top:$mediumgap;
+  }
+  &>a>img{
+    width:100%;
+    transform-style: preserve-3d;
 }
+  &>a>img:hover {
+      transition-duration: 0.5s;
+      transform: scale(1.1,1.1);
+      -webkit-transform: scale(1.1,1.1);
+      -ms-transform: scale(1.1,1.1);
+    }
+ 
+}
+
+.center{
+  text-align: center;
+}
+
 
 .panel h3{
 	text-transform: uppercase;
@@ -127,12 +170,13 @@ a {
   border-radius:1px; }
 
 .link-box-text {
-font-family: "brandon-grotesque", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+font-family: "Montserrat", sans-serif;
   text-align: center;
   color: $color-white;
   padding: 1rem; 
 	font-weight:700;
   margin: 0;
+  letter-spacing:.15em;
 }
 
 .god-desc {
@@ -144,25 +188,23 @@ font-family: 'Crimson Text', serif;
   padding-top: 6%;
   padding-left: 8.33333%; }
 
-.parthenon{
-	margin: 0 auto;
-	width:22em;
-	padding-bottom:$smallgap;
+.pb-20{
+	padding-bottom:$mediumgap;
 
 }
-
-
-/* Quiz Style */
-
-
+.landing-hero {
+   margin-top:3em;
+   img {
+    width:400px;
+   }
+}
 
 
 // QUIZ STYLING //
 .quiz{
 	width:80%;
-  padding-top: 40px;
+  padding-top:5em;
 	margin: auto;
-	background-color: #ccc;
 }
 
 
@@ -170,19 +212,32 @@ font-family: 'Crimson Text', serif;
   display: block;
   float:left;
   width: 50%;
+  height: 300px;
+  padding-right:5%;
 }
 
 .answers{
   display: block;
   float:right;
   width:50%;
-  background-color:white;
   text-align: center;
+}
+
+
+.taketest{
+  background-color:$color-main-gold-light;
+  &:hover{
+    background-color:lighten($color-main-gold-light, 20%);
+    cursor:pointer;
+  }
 }
 
 .next, #submit{
   display: block;
-  float:right;
+  float:left;
+  margin-top: 20px;
+  padding-left:40px;
+  padding-right:40px;
   background-color:$color-main-gold-light;
   &:hover{
     background-color:lighten($color-main-gold-light, 20%);
@@ -195,30 +250,52 @@ font-family: 'Crimson Text', serif;
   padding-top:20px;
   float:left;
   width:50%;
-  text-align:center;
+  text-align:left;
 }
-// .clear{
-//   content: '';
-//   display: table;
-//   clear:both;
-// }
+
+.quiz-nav ul{
+  margin:0;
+
+    & li{
+    display: inline-block;
+    padding:2px;
+    font-size: 3em;
+    color:lighten($color-main-gold-light,20%);
+  }
+}
+
+
+
+.quiz-nav-selected{
+   display: inline-block;
+  color:$color-main-gold-light !important;
+  transition: color 0.8s;
+}
+
+.quiz-buttons{
+  display: block;
+  float:left;
+}
 
 
 /* the answer part*/
 label{
+  font-family: "Montserrat", sans-serif;
 	display: block;
 	width: 100%;
   padding-top: 5%;
   padding-bottom: 5%;
+  margin-bottom:1px;
   vertical-align: center;
-
+  background-color: white;
+  border-bottom: 2px solid #F1F1F1;
 }
 
 /* hides the circle button 
 and aligns it with the label*/
 input[type="radio"]:empty{
-	width: 100%;
-  height: 100%;
+	width: 50%;
+  height: 10%;
 	position: absolute;
 	opacity: 0.01;
 }
@@ -231,14 +308,105 @@ input[type="radio"]+label{
 	cursor:pointer;
   margin:0;
 }
+label:hover{
+  cursor:pointer;
+  background-color: lighten($color-main-gold-light,20%);
+
+}
 
 /* when it's hovered*/
 input[type="radio"]:hover:not(:checked)+label{
 	background-color: lighten($color-main-gold-light,20%);
+  transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
 }
 /* when it's checked*/
 input[type="radio"]:checked+label{
 	background-color: $color-main-gold-light;
 }
+
 // MEDIA QUERIES //
 
+@media only screen and (min-width: 40.0625em){
+	.dash-3 {
+	    float: none !important;
+	    // width:100%;
+	    margin:0 1em;
+	}
+
+
+}
+
+@media only screen and (max-width: 1080px){
+
+  .epic{
+    font-size: 2.8em;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  
+  .epic{
+    font-size: 2.5em;
+  }
+
+   .question>h1{
+    width:100%;
+    height:250px;
+  }
+  .answers{
+    width:100%;
+    float:left;
+
+  }
+  .quiz-nav{
+    width:100%;
+    
+  }
+  .quiz-nav ul{
+
+    & li{
+    font-size: 2.5em;
+  }
+}
+
+}
+
+@media only screen and (max-width: 480px){
+  .landing-hero {
+    width:330px;
+    text-align:center;
+    margin: 5em auto 1em;
+  }
+  .secondary.center {
+    padding: 0 2em;
+  }
+
+  .epic{
+    font-size: 2.2em;
+  }
+
+  .question>h1{
+    width:100%;
+    height:220px;
+  }
+  .answers{
+    width:100%;
+    float:left;
+  }
+
+   .quiz-nav{
+    width:100%;
+    
+  }
+
+  .quiz-nav ul{
+
+    & li{
+    font-size: 2em;
+  }
+}
+
+}

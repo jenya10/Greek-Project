@@ -3,42 +3,53 @@
    <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aphrodite</title>
+    <title>Characters</title>
     <link rel="stylesheet" href="css/foundation.css"/>
-    <link rel="stylesheet" href="css/style.min.css">
-    <script src="https://use.typekit.net/nqt2lqf.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Crimson+Text:400,600italic' rel='stylesheet' type='text/css'>
+    
     <script src="/assets/application-908e25f4bf641868d8683022a5b62f54.js"></script>
     <script src="js/vendor/modernizr.js"></script>
+      <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+      $(function(){
+        $('.panel').hide();
+
+        $('.panel.pink').fadeIn(400);
+        $('.panel.purple').fadeIn(800);
+        $('.panel.green').fadeIn(1200);
+        $('.panel.yellow').fadeIn(1600);
+        $('.panel.blue').fadeIn(2000);
+        $('.panel.red').fadeIn(2400);
+
+      })
+
+    
+    </script>
   </head>
   <body>
 
   <!-- Top Navigation Bar -->
 
-    <div class="off-canvas-wrap" data-offcanvas>
-      <div class="inner-wrap">
-        <nav class="tab-bar">
-          <div class="row">
-              <section class="left tab-bar-section">
-                <a href="" class="home-link">
-                  <h1 class="title">The Greeks</h1>
-                </a>
-            </section>
-          </div>
-            <section class="right-small">
-              <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-            </section>
-          </nav>
-        <aside class="right-off-canvas-menu">
-          <ul class="off-canvas-list">
-            <li><label>Users</label></li>
-            <li><a href="#">Hari Seldon</a></li>
-            <li><a href="#">...</a></li>
-          </ul>
-        </aside>
-      <a class="exit-off-canvas"></a>
-      </div>
+  <div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+      <nav class="tab-bar">
+            <section class="left">
+              <a href="index.html" class="home-link">
+                <h1 class="title">The Greeks</h1>
+              </a>
+          </section>
+        
+        <section class="right ">
+          <a class="nav-links" href="quiz.html">Take Quiz</a>
+          <a class="nav-links" href="characters.html">All Gods</a>
+        </section>
+      </nav>
+    <a class="exit-off-canvas"></a>
     </div>
+  </div>
+  </div>
+
 
     
     <!-- Page Title -->
@@ -47,61 +58,73 @@
          
             <div class="large-4 medium-4 columns">
                <div class="panel pink">
-                  <img src="img/aphrodite.svg" alt="svg">
-                    <a href="#">
-                      <h3 class="center">poseidon</h3>
+                  <a href="aphrodite.html">
+                    <img src="img/aphrodite.svg" alt="svg">
+                  </a>
+                  <div class="pt-20">
+                      <h3 class="center">Aphrodite</h3>
                       <hr class="dash">
-                    </a>
+                  </div>
                </div>
             </div>
 
             <div class="large-4 medium-4 columns">
                <div class="panel purple">
-                  <img src="img/aphrodite.svg" alt="svg">
-                    <a href="#">
-                      <h3 class="center">poseidon</h3>
+                  <a href="dionysus.html">
+                    <img src="img/dyonisis.svg" alt="svg">
+                  </a>
+                  <div class="pt-20">
+                      <h3 class="center">Dionysus</h3>
                       <hr class="dash">
-                    </a>
+                  </div>
                </div>
             </div>
 
             <div class="large-4 medium-4 columns">
                <div class="panel green">
-                  <img src="img/aphrodite.svg" alt="svg">
-                    <a href="#">
-                      <h3 class="center">poseidon</h3>
-                      <hr class="dash">
+                   <a href="demeter.html">
+                     <img src="img/demeter.svg" alt="svg">
                     </a>
+                   <div class="pt-20">
+                      <h3 class="center">Demeter</h3>
+                      <hr class="dash">
+                    </div>
                </div>
             </div>
 
             <div class="large-4 medium-4 columns">
                <div class="panel yellow">
-                  <img src="img/aphrodite.svg" alt="svg">
-                    <a href="#">
-                      <h3 class="center">poseidon</h3>
+                 <a href="zeus.html">
+                    <img src="img/zeus.svg" alt="svg">
+                  </a>
+                  <div class="pt-20">
+                      <h3 class="center">Zeus</h3>
                       <hr class="dash">
-                    </a>
+                   </div>
                </div>
             </div>
            
           <div class="large-4 medium-4 columns">
                <div class="panel blue">
-                  <img src="img/aphrodite.svg" alt="svg">
-                    <a href="#">
-                      <h3 class="center">poseidon</h3>
+                  <a href="poseidon.html">
+                   <img src="img/poseidon.svg" alt="svg">
+                  </a>
+                   <div class="pt-20">
+                      <h3 class="center">Poseidon</h3>
                       <hr class="dash">
-                    </a>
+                  </div>
                </div>
             </div>
 
             <div class="large-4 medium-4 columns">
                <div class="panel red">
-                  <img src="img/aphrodite.svg" alt="svg">
-                    <a href="#">
-                      <h3 class="center">poseidon</h3>
+                  <a href="ares.html">
+                    <img src="img/ares.svg" alt="svg">
+                  </a>
+                   <div class="pt-20">
+                      <h3 class="center">Ares</h3>
                       <hr class="dash">
-                    </a>
+                    </div>
                </div>
             </div>
 

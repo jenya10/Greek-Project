@@ -56,27 +56,27 @@
 
       if (pos >= are && pos >= dio && pos >= aph && pos >= dem && pos >= zeu &&pos > 0) {
          // pos is the highest
-         result = "POSEIDON";
+         result = "Poseidon";
       }
       if (are > pos && are >= dio && are >= aph && are>= dem && are>= zeu && are > 0) {
          // are is the highest
-         result = "ARES";
+         result = "Ares";
       }
       if (dio >= pos && dio >= are && dio >= aph && dio >= dem && dio >= zeu &&dio > 0) {
          // dio is the highest
-         result = "DIONYSUS";
+         result = "Dionysus";
       }
       if (aph >= pos && aph >= are && aph >= dio && aph >= dem && aph >= zeu && aph > 0) {
          // aph is the highest
-         result = "APHRODITE";
+         result = "Aphrodite";
       }
        if (dem >= pos && dem >= are && dem >= dio && dem >= aph && dem >= zeu && dem > 0) {
          // dem is the highest
-         result = "DEMETER";
+         result = "Demeter";
       }
        if (zeu >= pos && zeu >= are && zeu >= dio && zeu >= aph && zeu >= dem && zeu > 0) {
          // zeu is the highest
-         result = "ZEUS";
+         result = "Zeus";
       }
 
       
@@ -88,19 +88,32 @@
 
 
 
+     
+
+
 $(function(){
 
-   $('#q2,#q3,#q4,#q5,#q6,#q7,.next').hide();
+   $('#q1,#q2,#q3,#q4,#q5,#q6,#q7,.next,.quiz-nav,.answers').hide();
+
+  }) 
+
+
+ //      };
+  $(document).ready(function(){ 
+   $('#q1,.quiz-nav,.answers').fadeIn(800);
+
 
    $('.answers>input').on("click", function(){
       $('.next').fadeIn().on("click", function(){
 
-      var id = $(this).parent().hide()
-         .next().fadeIn().index();
+      var id = $(this).parent().parent().hide()
+         .next().fadeIn(1000).index();
+
          $('.next').hide();
 
 
          $(".quiz-nav li").eq(id).addClass("quiz-nav-selected");
+         
 
       })
 
@@ -129,9 +142,9 @@ console.log(pos);
 
 
       //show the result and the number of tallies for each value
-         document.getElementById("result").innerHTML = "You are " + result;
+         // document.getElementById("result").innerHTML = "You are " + result;
          //open page of the result
-           //window.location = result + ".htm";
+           window.location = result + ".html";
 
     })
 
